@@ -2,6 +2,7 @@ package springMvc.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * @Auther: ybl
@@ -9,8 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Description:
  */
 @Controller
+@RequestMapping("/home")
 public class HomeController {
-    @RequestMapping("/")
+    @RequestMapping(method = RequestMethod.GET)
     public String home(){
         return "homePage";
     }

@@ -9,7 +9,7 @@ import springMvc.controller.HomeController;
 
 /**
  * @Auther: ybl
- * @Date: 2018/12/14 0014 11:15
+ * @Date: 2018/12/14 00145 11:15
  * @Description:
  */
 public class HomeConTest {
@@ -17,6 +17,6 @@ public class HomeConTest {
     public void testHome() throws Exception{
         HomeController homeController=new HomeController();
         MockMvc mockMvc=standaloneSetup(homeController).build();
-        mockMvc.perform(get("/")).andExpect(view().name("homePage"));
+        mockMvc.perform(get("/home")).andExpect(view().name("homePage"));
     }
 }
