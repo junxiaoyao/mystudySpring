@@ -20,4 +20,3 @@ public class HomeConTest {
         mockMvc.perform(get("/home")).andExpect(view().name("homePage"));
     }
 }
- b      
